@@ -6,29 +6,24 @@
     // the category, name, key, url, search path and color for your commands
     // if none of the specified keys are matched, the '*' key is used
     commands: [
-      [null, 'Google', '*', 'https://encrypted.google.com', '/search?q={}', '#111'],
-      ['Work', 'Drive', 'd', 'https://drive.google.com', '/drive/search?q={}', '#4285f4'],
-      ['Work', 'GitHub', 'g', 'https://github.com', '/search?q={}', '#333'],
-      ['Work', 'Inbox', 'i', 'https://inbox.google.com', '/search/{}', '#4285f4'],
-      ['Work', 'Keep', 'k', 'https://keep.google.com', '/#search/text={}', '#fb0'],
-      ['Lurk', 'Hunt', 'H', 'https://www.producthunt.com', '/search?q={}', '#da552f'],
-      ['Lurk', 'Photos', 'p', 'https://photos.google.com', '/search/{}', '#34a853'],
-      ['Lurk', 'Reddit', 'r', 'https://www.reddit.com', '/search?q={}', '#5f99cf'],
-      ['Lurk', 'Unsplash', 'u', 'https://unsplash.com/new', '/search/{}', '#000'],
-      ['Listen', 'Hypem', 'h', 'https://hypem.com/popular', '/search/{}', '#83c441'],
-      ['Listen', 'Line Radio', 'l', 'https://linerad.io', '/#{}', '#39CCCC'],
-      ['Listen', 'Play Music', 'm', 'https://play.google.com/music/listen#/all', '/music/listen#/sr/{}', '#FF4C20'],
-      ['Listen', 'SoundCloud', 's', 'https://soundcloud.com/discover', '/search?q={}', '#ff8800'],
+      [null, 'Google', '*', 'https://google.com', '/search?q={}', '#4A80F2'],
+      ['Search Engines', 'Google', 'g', 'https://google.com', '/search?q={}', '#4A80F2'],
+      ['Search Engines', 'Duck Duck Go', 'ddg', 'https://duckduckgo.com', '/?q={}', '#DE5833'],
+      ['Social', 'Twitter', 't','https://twitter.com','/search?q={}','#1DA1F2'],
+      ['Social', 'Google Plus', 'gp', "https://plus.google.com", "/s/{}", '#DB4437'],
+      ['Social', 'Instagram','ig',"https://instagram.com",'/explore/tags/{}','#AD2885'],
+      ['Social', "Reddit", "r", "https://reddit.com","/search?q={}","#FF4500"],
+      ['Social','{ The Governor\'s Log }', 'tgl', "https://penguingovernor.github.io",null,"#000000"],
+      ['School', 'MyUCSC', 'mu', 'https://my.ucsc.edu',null,"#00458C"],
+      ['School','Canvas','c','https://canvas.ucsc.edu',null,"#E4C721"],
+      ['Watch', 'YouTube', 'yt', 'https://youtube.com/feed/subscriptions', '/results?search_query={}', '#cd201f'],
       ['Watch', 'Netflix', 'n', 'https://www.netflix.com/browse', '/search?q={}', '#e50914'],
-      ['Watch', 'Twitch', 't', 'https://www.twitch.tv/directory/following', null, '#6441a5'],
-      ['Watch', 'YouTube', 'y', 'https://youtube.com/feed/subscriptions', '/results?search_query={}', '#cd201f'],
-      ['Learn', 'Academy', 'a', 'https://www.khanacademy.org', '/search?page_search_query={}', '#9cb443'],
-      ['Learn', 'Coursera', 'c', 'https://www.coursera.org', '/courses?query={}', '#407ED7'],
-      ['Learn', 'Egghead', 'e', 'https://egghead.io', '/search?q={}', '#171C23'],
-      ['Download', '7digital', '7', 'https://us.7digital.com', '/search?q={}', '#07606e'],
-      ['Download', 'RARBG', 'R', 'https://rarbg.to', '/torrents.php?search={}', '#00d1b2'],
-      ['Download', 'Pirate Bay', 'b', 'https://thepiratebay.org', '/search/{}', '#4c4132'],
-      ['Download', 'YTS', 'Y', 'https://yts.am/browse-movies/all/1080p/all/7/latest', '/browse-movies/{}', '#2f2f2f'],
+      ['Watch', 'Hulu', 'h', 'https://www.hulu.com', '/search?q={}', '#39C39B'],
+      ['Work', 'email', 'e', 'https://mail.google.com', '/search/{}', '#DB4437'],
+      ['Work', 'Drive', 'd', 'https://drive.google.com', '/drive/search?q={}', '#4285f4'],
+      ['Work', 'GitHub', 'gh', 'https://github.com', '/search?q={}', '#333'],
+      ['Tech',"Arch Wiki",'aw','https://wiki.archlinux.org','/index.php?title=Special%3ASearch&search={}'],
+      ['Tech','Distro Watch','dw','https://distrowatch.com','table.php?distribution={}','#F6EFC8']
     ],
 
     // give suggestions as you type
@@ -43,21 +38,15 @@
     // "History" suggestions come from your previously entered queries
     influencers: [
       { name: 'Default', limit: 4 },
-      { name: 'History', limit: 1 },
+      // { name: 'History', limit: 1 },
       { name: 'DuckDuckGo', limit: 4 },
     ],
 
     // default search suggestions for the specified queries
     defaultSuggestions: {
-      'd': ['d/u/1'],
-      'g': ['g/issues', 'g/pulls', 'gist.github.com', 'g/cadejscroggins'],
-      'i': ['i/u/1'],
-      'k': ['k/u/1'],
-      'l': ['l/#electronic+chill', 'l/#synthwave+chillwave', 'l/#focus+instrumental', 'l/#piano+sleep'],
-      'm': ['m/music/listen?u=1#/all'],
-      'p': ['p/u/1'],
-      'r': ['r/r/unixporn', 'r/r/startpages', 'r/r/webdev', 'r/r/technology'],
-      's': ['s/you/likes', 's/discover/the-upload'],
+      'r': ['r/r/unixporn', 'r/r/ProgrammerHumor', 'r/r/GifRecipies', 'r/r/UCSC'],
+      't': ['t/PenguinGovernor', 't/Lexikatttt'],
+      'gh': ['gh/PenguinGovernor']
     },
 
     // instantly redirect when a key is matched
@@ -102,8 +91,8 @@
   @import url('https://fonts.googleapis.com/css?family=Lato:400,900');
 
   :root {
-    --color0: #fff;
-    --color15: #111;
+    --color0: #111;
+    --color15: #fff;
   }
 
   body {
@@ -434,9 +423,11 @@
 
     _setTime() {
       const date = new Date();
-      const hours = this._pad(date.getHours());
+      const hour = date.getHours();
+      const hours = this._pad( hour >= 13 ? hour - 12 : hour );
       const minutes = this._pad(date.getMinutes());
-      this._el.innerHTML = hours + this._delimiter + minutes;
+      const modifier = this._pad( hour >= 13 ? "pm" : "am");
+      this._el.innerHTML = hours + this._delimiter + minutes + this._delimiter + modifier;
     }
 
     _start() {
@@ -520,8 +511,8 @@
       this._queryParser = options.queryParser;
     }
 
-    addItem() {}
-    getSuggestions() {}
+    addItem() { }
+    getSuggestions() { }
 
     _addSearchPrefix(items, query) {
       const searchPrefix = this._getSearchPrefix(query)
