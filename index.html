@@ -424,9 +424,9 @@
     _setTime() {
       const date = new Date();
       const hour = date.getHours();
-      const hours = this._pad( hour >= 13 ? hour - 12 : hour );
+      const hours = this._pad( hour == 0 ? 12 : hour >= 13 ? hour - 12 : hour );
       const minutes = this._pad(date.getMinutes());
-      const modifier = this._pad( hour >= 13 ? "pm" : "am");
+      const modifier = this._pad( hour == 0 ? "am" : hour >= 13 ? "pm" : "am" );
       this._el.innerHTML = hours + this._delimiter + minutes + this._delimiter + modifier;
     }
 
